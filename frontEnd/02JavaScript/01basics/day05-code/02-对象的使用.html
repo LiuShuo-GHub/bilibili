@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>对象的使用</title>
+</head>
+
+<body>
+  <script>
+    // 1.声明对象
+    let pink = {
+      uname: 'pink',
+      age: 18,
+      gender: '女'
+    }
+    console.log(pink)
+    console.log(typeof pink)
+    // 改 把性别女改成男
+    pink.gender = '男'
+    console.log(pink)
+    // 增
+    pink.hobby = '足球'
+    console.log(pink)
+    // 删(了解)
+    delete pink.age
+    console.log(pink)
+  </script>
+</body>
+
+</html>

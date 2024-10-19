@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>随机更换背景图片</title>
+  <style>
+    body {
+      background: url("https://picsum.photos/800") no-repeat top center/cover;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    // console.log(document.body)
+    // 取到N~M的随机整数
+    function getRandom(N, M) {
+      return Math.floor(Math.random() * (M - N + 1) + N)
+    }
+    const random = getRandom(1, 10)
+    document.body.style.backgroundImage = `https://picsum.photos/${random}00`
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>比较运算符</title>
+</head>
+
+<body>
+  <script>
+    if (num === 2) {
+
+    }
+    console.log(3 > 5)
+    console.log(3 >= 5)
+    console.log(2 == 2)
+    // 比较运算符有隐式转换 把 '2' 转换为 2 双等号 只判断值
+    console.log(2 == '2') // true
+    // === 全等 判断 值 和 数值类型都一样才行
+    // 以后判断是否相等 请用
+    console.log(2 === '2')
+    console.log(NaN === NaN) // NaN 不等于任何人，包括他自己
+    console.log('------------------------------------------');
+    console.log('a' < 'b'); // true
+    console.log('aa' < 'bb');  // true
+    console.log('aa' < 'aac');  // true
+    console.log('------------------------------------------');
+
+  </script>
+</body>
+
+</html>
