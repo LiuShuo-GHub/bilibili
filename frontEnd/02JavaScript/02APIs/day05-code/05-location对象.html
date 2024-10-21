@@ -6,12 +6,30 @@
     <title>location对象</title>
   </head>
   <body>
+    <form action="">
+      <input type="text" name="username" />
+      <input type="password" name="password" />
+      <button>提交</button>
+    </form>
+
+    <button class="reload">刷新</button>
     <script>
       // console.log(window.location);
       // console.log(location);
       // console.log(location.href);
       // 1.href 经常用href 利用js的方法去跳转页面
-      location.href = "http://www.baidu.com";
+      // location.href = "http://www.baidu.com";
+      // 2.获取?后面的内容
+      // location.search
+      // 3.获取#后面的内容
+      // location.hash
+      const reload = document.querySelector(".reload");
+      reload.addEventListener("click", function () {
+        // f5 刷新页面
+        location.reload();
+        // 强制刷新 ctrl+f5
+        location.reload(true);
+      });
     </script>
   </body>
 </html>
