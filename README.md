@@ -1,2 +1,10 @@
-# bilibili
-bilibili taught herself
+# personal
+
+Personal learning warehouse
+
+
+# technology
+
+ HTML
+ CSS
+ JavaScript
