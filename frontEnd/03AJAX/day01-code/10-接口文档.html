@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <button class="btn">注册用户</button> -->
+  <button class="btn">用户登陆</button>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+  <script>
+    /*
+      注册用户：http://hmajax.itheima.net/api/login
+      请求方法：POST
+      参数名：
+        username: 用户名（中英文数字组成，最少8位）
+        password：密码（最少6位）
+
+      目标：点击按钮，通过axios提交用户名和密码，完成登陆
+    */
+    document.querySelector('.btn').addEventListener('click', function () {
+      // 用户登陆
+      axios({
+        url: 'http://hmajax.itheima.net/api/login',
+        method: 'POST',
+        data: {
+          username: 'itheima7777',
+          password: '123456'
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>
