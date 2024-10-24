@@ -5,21 +5,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>home</title>
+  <!-- 引入 ElementUI 样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- 引入公共样式 -->
+  <link rel="stylesheet" href="./css/common.css">
+  <!-- 引入当前页样式 -->
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-  <!-- 于昕冉，我喜欢你！ -->
-  <div></div>
-  <!-- <div>
-    <video src="./public/video/2024-10-23.mp4" width="200" controls></video>
-  </div> -->
+  <div id="app">
+    <div class="login">
+      账号：<input type="text" name="uname" v-model="uname"><br>
+      密码：<input type="password" name="pword" v-model="pword"><br>
+      <button @click="login">登陆</button>
+    </div>
+    <a href="./html/xinRanYu.html" v-show="isShow">再次点击登陆</a>
+  </div>
+  <!-- 引入 vue.js 框架 -->
+  <script src="./javascript/vue.js"></script>
+  <!-- 引入 ElementUI 组件库 -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
   <script>
-    // 获取时间（递归函数）
-    function getTime() {
-      document.querySelector('div').innerHTML = new Date().toLocaleString()
-      setTimeout(getTime, 1000);
-    }
-    getTime()
+    var vm = new Vue({
+      el: "#app",
+      data: {
+        uname: '',
+        pword: '',
+        isShow: false
+      },
+      methods: {
+        // 登陆
+        login() {
+          if (this.uname === 'xinRanYu' && this.pword === 'xinRanYu') {
+            this.isShow = true
+          } else {
+            alert('账号或密码输入错误')
+          }
+        }
+      }
+    })
   </script>
 </body>
 

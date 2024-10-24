@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>于昕然</title>
+  <!-- 引入 ElementUI 样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- 引入公共样式 -->
+  <link rel="stylesheet" href="../css/common.css">
+  <!-- 引入视频控件样式 -->
+  <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="app">
+    <div class="one">
+      {{msg}}
+    </div>
+    <div class="two">
+      <Video width="264" height="640" id="myVideo" controls muted autoplay></Video>
+      <source src="../public/video/2024-10-23.mp4" type="video/mp4">
+      </Video>
+    </div>
+  </div>
+  <!-- 引入 vue.js 库 -->
+  <script src="../javascript/vue.js"></script>
+  <!-- 引入 ElementUI 组件库 -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <!-- 引入视频控件 库 -->
+  <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
+  <script>
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        msg: '于昕然，我喜欢你！！！',
+        vedio: '../public/video/2024-10-23.mp4'
+      }
+    })
+  </script>
+</body>
+
+</html>

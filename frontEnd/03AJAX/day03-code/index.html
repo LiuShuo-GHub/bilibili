@@ -8,6 +8,7 @@
 </head>
 
 <body>
+  <p class="my-p"></p>
   <script>
     /* 
         目标：使用XMLHttpRequest对象与服务器通信
@@ -20,12 +21,16 @@
     const xhr = new XMLHttpRequest()
 
     // 2、配置请求方法和 url 地址
-    xhr.open('GET', 'http//:hmajax.itheima.net/api/province')
+    xhr.open('GET', 'http://hmajax.itheima.net/api/province')
 
     // 3、监听 loadend 事件，接收响应结果
     xhr.addEventListener('loadend', () => {
       console.log(xhr.response);
 
+      const data = JSON.parse(xhr.response)
+      console.log(data.list.join('<br>'));
+
+      document.querySelector('.my-p').innerHTML = data.list.join('<br>')
     })
 
     // 4、请求发送
